@@ -1,9 +1,8 @@
 This docker container uses https://github.com/stecklars/dynamic-dns-netcup-api
 
 For Usage:
-- create a config.php within build dir (see https://github.com/stecklars/dynamic-dns-netcup-api/blob/master/config.dist.php)
-- fill with your credentials
+- update provided config.php with your credentials/settings
 - build container
 - spin up container
 
-DNS will be check/updated every 15 minutes
+DNS will be checked/updated every 15 minutes
