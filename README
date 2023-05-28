@@ -1,6 +1,7 @@
 This docker container uses https://github.com/stecklars/dynamic-dns-netcup-api
 
 For Usage:
+- clone repo
 - update provided config.php with your credentials/settings
 - build container
 - spin up container
