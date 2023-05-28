@@ -6,8 +6,13 @@ RUN git clone https://github.com/stecklars/dynamic-dns-netcup-api
 
 WORKDIR ./dynamic-dns-netcup-api
 
-RUN chmod u+x update.php
 
-RUN crontab -l | { cat; echo "* * * * * bash update.php"; } | crontab -
+
+COPY config.php config.php
+COPY entrypoint.sh entrypoint.sh
+
+RUN chmod u+x update.php entrypoint.sh
+
+RUN crontab -l | { cat; echo "*/15 * * * * sh /dynamic-dns-netcup-api/entrypoint.sh"; } | crontab -
  
 CMD ["/usr/sbin/crond", "-f"]

@@ -1,0 +1,1 @@
+/dynamic-dns-netcup-api/update.php
